@@ -95,18 +95,30 @@ function buildInvidualBonus(indivEmployeeArray){
   var bonusDollars = (bonusPercent*0.01) * salary;
   console.log("bonus dollars: ", bonusDollars);
 
-  compensationArray[2] = salary + bonusDollars; // + ((employeeBonus(indivEmployeeArray)/100)) * indivEmployeeArray[2];
+  compensationArray[2] = Number(salary) + Number(bonusDollars); // + ((employeeBonus(indivEmployeeArray)/100)) * indivEmployeeArray[2];
+  console.log(compensationArray);
+
+  compensationArray[3] = bonusDollars;
   console.log(compensationArray);
 }
 
-//buildInvidualBonus(atticus);
+buildInvidualBonus(atticus);
 
-// function calculateAllBonus(employeesArray){
-//   //This function runs the whole show
-//   for (var i=0; i<employees.length; i++) {
-//     //calculateIndivBonus(i);
-//   }
-//   //returns final bonus array
-// }
 
-//calcuateAllBonus(employees);
+
+function calculateAllBonus(employeesArray){
+  //This function runs the whole show
+  finalArray = [];
+  for (var i=0; i<employeesArray.length; i++) {
+    finalArray[i] = buildInvidualBonus(employeesArray[i]);
+    //calculateIndivBonus(i);
+  }
+  //returns final bonus array
+  console.log(finalArray);
+  return finalArray;
+
+}
+
+
+
+calculateAllBonus(employees);
