@@ -1,5 +1,8 @@
 console.log("sourced");
 
+//global employees
+//name, empNum, salary, rating
+
 var atticus = ["Atticus", "2405", "47000", 3];
 var jem = ["Jem", "62347", "63500", 4];
 var boo = ["Boo", "11435", "54000", 3];
@@ -9,6 +12,52 @@ var mayella = ["Mayella", "89068", "35000", 2];
 
 var employees = [atticus, jem, boo, scout, robert, mayella];
 //console.log(employees[0]);
+
+
+//following along with liveSolve here : ------------------
+
+// for (var i = 0; i <employees.length; i++) {
+//   console.log(employees[i]);
+//   //call function calcNewBonus
+//   // log the result (the return)
+// }
+
+// console.log(calcNewBonus(atticus));
+//
+// // function that takes single employee arry and returns new array
+// function calcNewBonus(singleEmployee){
+//   console.log("in calcNewBonus singleEmployee -> ", singleEmployee);
+//
+//   var empRating = singleEmployee[3];
+//
+//   var bonusPercentage = 0;
+//
+// // determine base bonus using employee rating
+//   switch (empRating) {
+//     case 2:
+//       bonusPercentage = 0;
+//       break;
+//     case 3:
+//       bonusPercentage = 4;
+//       break;
+//     case 4:
+//       bonusPercentage = 6;
+//       break;
+//     case 5:
+//       bonusPercentage = 0;
+//       break;
+//     default:
+//   }
+//   //use switch condition- days of the week, specific rating numbers
+//
+//   var newEmpArray = [];
+// // contains name, bonus %, compensation (salary+bonus), bonus (rounded)
+//   return newEmpArray;
+// }
+// //returns new array
+
+
+// ---------------------------------
 
 
 // this function returns ratingBonus which is a percent
@@ -109,16 +158,14 @@ function buildInvidualBonus(indivEmployeeArray){
 function calculateAllBonus(employeesArray){
   //This function runs the whole show, brings everything together
   finalArray = [];
-  for (var i=0; i<employeesArray.length-1; i++) {
+  for (var i=0; i<employeesArray.length; i++) {
     finalArray[i] = buildInvidualBonus(employeesArray[i]);
     //calculateIndivBonus(i);
   }
   //returns final bonus array
   console.log(finalArray);
   return finalArray;
-
 }
-
 
 
 calculateAllBonus(employees);
