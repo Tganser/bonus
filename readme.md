@@ -9,6 +9,7 @@ Data Structure
 The company is providing you with a few sample arrays that serve as examples of how their data is currently being stored. Each array is like a row in a spreadsheet. And each of these arrays are stored in a main array named employees, which is much like an entire sheet of one spreadsheet.
 
 Employee Array
+---------------
 
 Each employee array currently is configured in this way:
 
@@ -28,7 +29,9 @@ Finally, iterate over the employees array and
 
 use each employee array as input to your first function
 console.log the results of each iteration.
+
 Individual Bonus calculation
+-----------------------------
 
 Those who have a rating of a 2 or below should not receive a bonus.
 Those who have a rating of a 3 should receive a base bonus of 4% of their base annual income.
