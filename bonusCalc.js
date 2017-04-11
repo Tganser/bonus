@@ -8,7 +8,7 @@ var robert = ["Robert", "26835", "66000", 1];
 var mayella = ["Mayella", "89068", "35000", 2];
 
 var employees = [atticus, jem, boo, scout, robert, mayella];
-console.log(employees[0]);
+//console.log(employees[0]);
 
 
 // this function returns ratingBonus which is a percent
@@ -33,7 +33,7 @@ function checkRating(indivEmployeeArray){
   else {
     console.log("Error in checkRating function");
   }
-  console.log("Rating Employee Bonus Percent = ", ratingBonus);
+  //console.log("Rating Employee Bonus Percent = ", ratingBonus);
   return ratingBonus;
   // end ratingBonus/checkRating
 }
@@ -68,7 +68,7 @@ function employeeBonus(indivEmployeeArray){
   //newBonusPercent = Math.min(bonusPercent,13);
   //console.log(newBonusPercent);
   //newBonusPercent = Math.max(bonusPercent,0);
-  console.log("New Bonus Percent", newBonusPercent);
+  //console.log("New Bonus Percent", newBonusPercent);
 
   //console.log("Employee Bonus Percent = ", newBonusPercent);
   return newBonusPercent;
@@ -87,29 +87,29 @@ function buildInvidualBonus(indivEmployeeArray){
   var bonusPercent = employeeBonus(indivEmployeeArray);
 
   compensationArray[0] = indivEmployeeArray[0];
-  console.log(compensationArray);
+  //console.log(compensationArray);
 
   compensationArray[1] = bonusPercent;
-  console.log(compensationArray);
+  //console.log(compensationArray);
 
   var bonusDollars = (bonusPercent*0.01) * salary;
-  console.log("bonus dollars: ", bonusDollars);
+  //console.log("bonus dollars: ", bonusDollars);
 
   compensationArray[2] = Number(salary) + Number(bonusDollars); // + ((employeeBonus(indivEmployeeArray)/100)) * indivEmployeeArray[2];
-  console.log(compensationArray);
+  //console.log(compensationArray);
 
   compensationArray[3] = bonusDollars;
   console.log(compensationArray);
 }
 
-buildInvidualBonus(atticus);
+//buildInvidualBonus(atticus);
 
 
 
 function calculateAllBonus(employeesArray){
-  //This function runs the whole show
+  //This function runs the whole show, brings everything together
   finalArray = [];
-  for (var i=0; i<employeesArray.length; i++) {
+  for (var i=0; i<employeesArray.length-1; i++) {
     finalArray[i] = buildInvidualBonus(employeesArray[i]);
     //calculateIndivBonus(i);
   }
